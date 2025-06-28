@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+         Image
+
+    </title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <style>
+    body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            
+        }
+    .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            object-fit: cover;
+            z-index: -1;
+            filter:brightness(60%);
+        }
+  h1{
+      font-size: 70px;
+      color:greenyellow;
+      text-align:center;
+      font-weight: bolder;
+      font-family: cursive;
+      text-shadow: 5px 5px 5px rgb(47, 75, 4);
+      padding: 5px 5x;
+      position: relative;
+      top:5%;
+      
+
+      
+    }
+    .to
+    {
+    background-color:rgb(22, 16, 16);
+    height:130px;
+    border: 6px solid rgb(32, 31, 31);
+    
+    
+    }
+    .home
+    {
+      font-size: 30px;
+      color:greenyellow;
+    
+      font-weight: bolder;
+      position: absolute;
+      top: 3%;
+      padding:10px 10px;
+      margin: 1em auto;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .about
+    {
+      font-size: 30px;
+      color:greenyellow;
+    
+      font-weight: bolder;
+      position: absolute;
+      left:10%;
+      top:4%; 
+      padding:5px 5px;
+      margin:1em auto;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+   
+               
+   button{
+    font-size: 40px;
+      color:rgb(9, 15, 12);
+    
+      font-weight: bolder;
+      background-color: greenyellow;
+      position: absolute;
+      left:85%;
+      top:7%;
+      border: none;
+      border-radius: 10px;
+      width: 150px;
+      padding: 5px 5px;
+      box-shadow: 3px 3px rgb(63, 97, 12) ;
+   }
+   button:hover{
+    background-color: rgb(99, 160, 9);
+    cursor: pointer;
+   }
+  
+
+  
+  
+
+           
+  </style>
+  
+  <body>
+    <div class ="container">
+    <div class="to">
+      <h1>LUNAR NOVA</h1>
+      <video autoplay muted loop class="video-background">
+        <source src="102250-659832349_small.mp4" type="video/mp4">
+    </video>
+      <div class="home">
+        Home
+      </div>
+      <button id ="loginBtn">
+        Login
+      </button>
+     
+    <div class ="about">
+      About us
+      
+    </div>
+    
+    
+    <div class="slider">
+      <!-- slides -->
+      <div class="slider__slides">
+        <div class="slide s--active">
+          <div class="slide__inner">
+            <div class="slide__content">
+              <h2 class="slide__heading">Chandraayan 2</h2>
+              <p class="slide__text">Launched on Jul 22,2019
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__inner">
+            <div class="slide__content">
+              <h2 class="slide__heading">Objective of Chandraayan 2</h2>
+              <p class="slide__text">
+                Chandrayaan-2 aims for enhancing our understanding of the Moon, stimulate the advancement of technology, promote global alliances and inspire a future generation of explorers and scientists.
+
+
+                Moon provides the best linkage to Earth’s early history. It offers an undisturbed historical record of the inner Solar system environment. 
+                Though there are a few mature models, further explanations were needed to understand the origin of the Moon.
+                 Extensive mapping of lunar surface to study variations in lunar surface were essential to trace back the origin and evolution of the Moon. 
+                 <br><br>
+        Evidence for water molecules discovered by Chandrayaan-1, required further studies on the extent of water molecule distribution on the surface, 
+        below the surface and in the tenous lunar exosphere to address the origin of water on Moon.
+
+                The Lunar South pole is especially interesting because of the lunar surface area that remains in shadow is much larger than that at the North Pole.
+                 There could be a possibility of presence of water in permanently shadowed areas around it. In addition, South Pole region has craters that are cold traps and contain a fossil record of the early Solar System.
+                
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__inner">
+            <div class="slide__content">
+              <h2 class="slide__heading">Chandrayaan 3</h2>
+              <p class="slide__text">Launched on Jul 14,2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide__inner">
+            <div class="slide__content">
+              <h2 class="slide__heading"> Touching the Moon, Inspiring the World</h2>
+              <p class="slide__text">Chandrayaan-3 is India's third lunar exploration mission, developed by the Indian Space Research Organisation (ISRO). It follows Chandrayaan-2 and was aimed at building on the previous mission's objectives, with a focus on achieving a successful soft landing on the Moon's surface.
+                Chandrayaan-3’s primary goal was to achieve a successful soft landing on the Moon. Unlike Chandrayaan-2, Chandrayaan-3 did not include an orbiter, as the Chandrayaan-2 orbiter was still operational and providing data.
+The mission aimed to demonstrate the capability of a soft landing on the lunar surface and deploy a rover to explore and analyze the surface.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slide s--prev">
+          <div class="slide__inner">
+            <div class="slide__content">
+              <h2 class="slide__heading">Issues Faced by chandrayaan 2 and 3</h2>
+              <p class="slide__text1"> 
+                <b>Chandrayaan-2:</b>
+                <ul>
+                  <li><b>Lander Anomaly:</b> Loss of communication during final descent, leading to a hard landing.</li>
+                  <li><b>Orbiter Precision:</b> High demands for navigation and communication.</li>
+                  <li><b>Complex Landing Sequence:</b> Issues during the final stages of descent.</li>
+                </ul>
+                <br>
+                
+                <b>Chandrayaan-3:</b>
+                <ul>
+                  <li><b>Enhanced Design:</b> Improvements in lander reliability based on Chandrayaan-2.</li>
+                  <li><b>Launch Delays:</b> Postponed for additional testing and refinements.</li>
+                  <li><b>Landing Technology:</b> New tech for soft landing, including navigation and hazard avoidance.</li>
+                </ul>   
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- slides end -->
+      <div class="slider__control">
+        <div class="slider__control-line"></div>
+        <div class="slider__control-line"></div>
+      </div>
+      <div class="slider_control slider_control--right m--right">
+        <div class="slider__control-line"></div>
+        <div class="slider__control-line"></div>
+      </div>
+     
+<div class="c" id="s">
+
+  <input type="radio" name="a" id="cr-1" checked>
+  <label for="cr-1" style="--hue: 32"></label>
+  <div class="ci" style="--z: 4">
+    <h2 class="ch" style="--h: 32; --s: 80%; --l: 90%">Welcome to our dedicated platform for lunar research and exploration, where we focus on advancing the study of Permanently Shadowed Regions (PSR) of lunar craters. Our mission is to develop cutting-edge software that enhances low-light images captured by the OHRC of Chandrayaan-2, transforming them into high-quality, noise-reduced images with better signal-to-noise ratios.
+    </h2>
+    <img src="sv.jpg" width="920px" height="400px">
+  </div>
+
+  <input type="radio" name="a" id="cr-2">
+  <label for="cr-2" style="--hue: 82"></label>
+  <div class="ci" style="--z: 3">
+    <h2 class="ch" style="--h: 82; --s: 80%; --l: 90%">Our project is designed to serve researchers, Ph.D. students, and professionals who are interested in lunar exploration, landing site selection, and geomorphological studies. By providing a robust tool for image enhancement, we aim to contribute to the creation of the first comprehensive PSR image map of the lunar poles, enabling deeper insights and discoveries about the Moon.
+    </h2>
+    <img src="sv2.jpg" width="920px" height="400px">
+  </div>
+
+  <input type="radio" name="a" id="cr-3">
+  <label for="cr-3" style="--hue: 40"></label>
+  <div class="ci" style="--z: 2">
+    <h2 class="ch" style="--h: 40; --s: 100%; --l: 89%">We are a passionate team of engineers, and space enthusiasts committed to pushing the boundaries of lunar research. Our work is fueled by the challenges posed by low-light conditions in PSR regions, and we are dedicated to developing solutions tailored specifically for the unique requirements of Chandrayaan-2 data.
+    </h2>
+    <img src="sv3.jpg" width="920px" height="400px">
+  </div>
+
+  <input type="radio" name="a" id="cr-4">
+  <label for="cr-4" style="--hue: 210"></label>
+  <div class="ci" style="--z: 1">
+    <h2 class="ch" style="--h: 210; --s: 70%; --l: 90%">Join us on this journey to unveil the hidden mysteries of the Moon, and together, let's expand our understanding of the cosmos.</h2>
+    <img src="sv4.jpg" width="920px" height="400px">
+  </div>
+
+</div>
+
+<!-- ABS -->
+<!-- ========================================================================== -->
+
+
+
+
+  
+    
+  
+</div>
+
+
+
+
+
+
+
+
+      
+      <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            window.location.href = 'login.html'; 
+        });
+
+      </script>
+      
+    <script>
+      (function() {
+  var $slides = document.querySelectorAll('.slide');
+  var $controls = document.querySelectorAll('.slider__control');
+  var numOfSlides = $slides.length;
+  var slidingAT = 1300; // sync this with scss variable
+  var slidingBlocked = false;
+
+  [].slice.call($slides).forEach(function($el, index) {
+    var i = index + 1;
+    $el.classList.add('slide-' + i);
+    $el.dataset.slide = i;
+  });
+
+  [].slice.call($controls).forEach(function($el) {
+    $el.addEventListener('click', controlClickHandler);
+  });
+
+  function controlClickHandler() {
+    if (slidingBlocked) return;
+    slidingBlocked = true;
+
+    var $control = this;
+    var isRight = $control.classList.contains('m--right');
+    var $curActive = document.querySelector('.slide.s--active');
+    var index = +$curActive.dataset.slide;
+    (isRight) ? index++ : index--;
+    if (index < 1) index = numOfSlides;
+    if (index > numOfSlides) index = 1;
+    var $newActive = document.querySelector('.slide-' + index);
+
+    $control.classList.add('a--rotation');
+    $curActive.classList.remove('s--active', 's--active-prev');
+    document.querySelector('.slide.s--prev').classList.remove('s--prev');
+    
+    $newActive.classList.add('s--active');
+    if (!isRight) $newActive.classList.add('s--active-prev');
+    
+
+    var prevIndex = index - 1;
+    if (prevIndex < 1) prevIndex = numOfSlides;
+
+    document.querySelector('.slide-' + prevIndex).classList.add('s--prev');
+
+    setTimeout(function() {
+      $control.classList.remove('a--rotation');
+      slidingBlocked = false;
+    }, slidingAT*0.75);
+  };
+}());
+    </script>
+ 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+    
+    </div>
+    </div>
+
+  </body>
+</html>

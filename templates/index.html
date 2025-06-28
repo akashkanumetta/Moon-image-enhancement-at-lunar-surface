@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Enhancement</title>
+    <style>
+        /* Styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background: url('sv9.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover; /* Make the background cover the entire page */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Styles for the container */
+        .container {
+            background: linear-gradient(to right, #f5f5dc, #e3c7a1, #d2b48c);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Drop shadow for a 3D effect */
+            text-align: center;
+            width: 100%;
+            width: 500px;
+            height: 500px;
+        }
+
+        /* Heading styles */
+        h1 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #333;
+        }
+
+        /* Input and button styles */
+        input[type="file"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            
+            color:black;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #9ca2a8;
+        }
+
+        /* Styles for the result section */
+        .result {
+            margin-top: 20px;
+        }
+
+        .result img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 400px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            input[type="file"],
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Low-Light Image Enhancement</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="file" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+        <div class="result" id="result">
+            <h2>Enhanced Image:</h2>
+            <img id="enhancedImage" src="" alt="Enhanced image will appear here">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file to upload.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/upload/', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    const enhancedImage = document.getElementById('enhancedImage');
+                    enhancedImage.src = data.image_data;
+                } else {
+                    const errorData = await response.json();
+                    console.error('Error:', errorData);
+                    alert('Failed to upload file. Please check the console for more details.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while uploading the file.');
+            }
+        });
+    </script>
+</body>
+</html>
